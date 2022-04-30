@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../src/css/data.css">
+    <title>個人資料</title>
+</head>
+<body>
+    <nav class="d-flex flex-row-reverse">
+        <a class="btn btn-info me-3 mt-3">登出</a>
+    </nav>
+
+    <div class="container mt-5 new">
+        <div class="accordion" id="accordionPresentData">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  基本資料
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPresentData">
+                <div class="accordion-body">
+                    <div class="row">
+                        <div class="mb-1">姓名：<span class="name_data">Lorem, ipsum dolor.</span></div>
+                        <div class="mb-1">性別：<span class="sex_data">Lorem, ipsum dolor.</span></div>
+                        <div class="mb-1">身分證字號：<span class="id_number_data">Lorem, ipsum dolor.</span></div>
+                        <div class="mb-1">生日：<span class="birth_date_data">Lorem, ipsum dolor.</span></div>
+                        <div class="mb-1">病歷號：<span class="medical_record_number_data">Lorem, ipsum dolor.</span></div>
+                        <div class="mb-1">就診日期：<span class="date_data">Lorem, ipsum dolor.</span></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  COVID確診資料
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionPresentData">
+                <div class="accordion-body">
+                    <div class="mb-1">是否曾為COVID確診個案：<span class="infect_covid_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">COVID治療地點：<span class="treatment_place_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">確診日期：<span class="infect_date_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">COVID治療期間最嚴重的氧氣使用經驗：<span class="oxygen_treatment_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">COVID治療期間是否入住加護病房：<span class="ICU_treatment_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">出院日期：<span class="discharged_date_data">Lorem, ipsum dolor.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  後續追蹤/回診資料
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionPresentData">
+                <div class="accordion-body">
+                    <div class="mb-1">COVID之後，是否因為COVID定期回診：<span class="revisit_data">Lorem, ipsum dolor.</span></div>
+                    <div class="mb-1">回診科別：<span class="revisit_division_data">Lorem, ipsum dolor.</span></div>
+                
+                </div>
+              </div>
+            </div>
+            
+          </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

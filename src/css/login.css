@@ -1,0 +1,10 @@
+@media (min-width:768px) {
+    .new{      
+        width: 576px;
+    }
+}
+@media (max-width:767px) {
+    .new{
+        width: 75%;
+    }
+}

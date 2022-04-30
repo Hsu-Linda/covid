@@ -1,0 +1,34 @@
+@media (min-width:768px) {
+    .new{      
+        width: 700px;
+    }
+}
+@media (max-width:767px) {
+    .new{
+        width: 100%;
+    }
+}
+
+.position-absolute::after{
+    content:"";
+    position: absolute;
+    top: 35px;
+    
+
+   
+}
+.position-relative button:nth-child(1)::after{
+    content:"基本資料";
+    left: -15px;
+    width: 60px; 
+}
+.position-relative button:nth-child(2)::after{
+    content:"COVID確診資料";
+    left: -50px;
+    width: 120px; 
+}
+.position-relative button:nth-child(3)::after{
+    content:"後續追蹤";
+    left: -15px;
+    width: 60px; 
+}

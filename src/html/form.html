@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../src/css/form.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="d-flex flex-row-reverse">
+        <a class="btn btn-info me-3 mt-3">登入</a>
+    </nav>
+
+    <section>
+            <div class="card mt-3 position-absolute start-50 translate-middle-x new"> 
+                <div class="card-body">
+                    <div class="card-title h2 text-center mb-4 mt-1">後新冠門診個案填寫</div>  
+                    <div class="card-text px-4">
+                        
+                        <section>
+                            <div class="position-relative mb-5">
+                                <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-info rounded-pill"  style="width: 2rem; height:2rem;">1</button>
+                                <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+                                <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" id="h"  style="width: 2rem; height:2rem;">3</button>
+                                <div class="progress" style="height: 1px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                            </div>
+                        </section>
+                        
+                        
+                        <section >
+                            <div class="container">
+                                <form>
+
+                                    <section class="s1">
+                                        <div class="pt-4 mb-3">
+                                        <label for="name" class="form-label">姓名</label>
+                                        <input type="text" class="form-control" name="name" id="name" >
+                                        </div>
+                                        
+                                        <div class="mb-3">
+                                        <label for="id_number" class="form-label">身分證字號</label>
+                                        <input type="text" class="form-control" name="id_number" id="id_number" style="text-transform:uppercase;" maxlength="10" minlength="10">
+                                        </div>
+            
+                                        <div class="mb-3">
+                                            <label for="sex" class="form-label">性別</label>
+                                            <div class="row px-3 ">
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="sex" id="male" value="1" checked>
+                                                    <label class="form-check-label" for="male">
+                                                    男
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="sex" id="female" value="0" > 
+                                                    <label class="form-check-label" for="female">
+                                                    女
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mb-3">
+                                            <label for="birth_date" class="form-label">生日</label>
+                                            <input type="date" class="form-control" name="birth_date" id="birth_date" >
+                                        </div>
+            
+                                        <div class="mb-3">
+                                            <label for="medical_record_number" class="form-label">病歷號</label>
+                                            <input type="text" class="form-control" name="medical_record_number" id="medical_record_number" >
+                                        </div>
+            
+                                        <div class="mb-4">
+                                            <label for="date" class="form-label">就診日期</label>
+                                            <input type="date" class="form-control" name="date" id="date" >
+                                        </div>
+                                        
+                                        <div class="d-flex flex-row-reverse "></nav>
+                                            <a class="btn btn-info  " >下一頁</a>
+                                        </div>
+                                    </section>
+
+                                    <section class="s2">
+
+                                        <div class="mb-3">
+                                            <label for="infect_covid" class="form-label">是否曾為COVID確診個案</label>
+                                            <div class="row px-3 ">
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="infect_covid" id="infect_true" value="1" >
+                                                    <label class="form-check-label" for="infect_true">
+                                                    是
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="infect_covid" id="infect_false" value="0" > 
+                                                    <label class="form-check-label" for="infect_false">
+                                                    否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-3">
+                                            <label for="treatment_place" class="form-label">COVID治療地點</label>
+                                            <select class="form-select" >
+                                                <option selected>同時符合 優先選擇 醫院>防疫旅館>家裡</option>
+                                                <option value="1">醫院</option>
+                                                <option value="2">防疫旅館</option>
+                                                <option value="3">家裡</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="pt-4 mb-3">
+                                            <label for="infect_date" class="form-label">確診日期</label>
+                                            <input type="date" class="form-control" name="infect_date" id="infect_date" >
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="ICU_treatment" class="form-label">COVID治療期間是否入住加護病房</label>
+                                            <div class="row px-3 ">
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="ICU_treatment" id="ICU_true" value="1" >
+                                                    <label class="form-check-label" for="ICU_true">
+                                                    是
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="ICU_treatment" id="ICU_false" value="0" > 
+                                                    <label class="form-check-label" for="ICU_false">
+                                                    否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-3">
+                                            <label for="oxygen_treatment" class="form-label">COVID治療期間最嚴重的氧氣使用經驗</label>
+                                            <select class="form-select" >
+                                                <option selected>請選擇 最嚴重用氧經驗 (若您不清楚，請點選不清楚)</option>
+                                                <option value="-1">不清楚</option>
+                                                <option value="0">無</option>                                            
+                                                <option value="1">鼻導管</option>
+                                                <option value="2">呼吸面罩</option>
+                                                <option value="3">高流量鼻導管</option>
+                                                <option value="4">氣管內管插管</option>
+                                            </select>
+                                        </div>
+    
+
+                                        <div class="pt-4 mb-4">
+                                            <label for="discharged_date" class="form-label">出院日期</label>
+                                            <input type="date" class="form-control" name="discharged_date" id="discharged_date" >
+                                        </div>
+                                    </section>
+
+                                    
+                                    <div class="d-flex flex-row justify-content-between "></nav>
+                                        <a class="btn btn-secondary  " >上一頁</a>
+                                        <a class="btn btn-info  " >下一頁</a>
+                                    </div>
+
+
+                                    <section class="s3">
+
+
+                                    </section>
+                                        <div class="mb-3">
+                                            <label for="revisit" class="form-label">COVID之後，是否因為COVID定期回診</label>
+                                            <div class="row px-3 ">
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="revisit" id="revisit_true" value="1" >
+                                                    <label class="form-check-label" for="revisit_true">
+                                                    是
+                                                    </label>
+                                                </div>
+                                                <div class="form-check col">
+                                                    <input class="form-check-input" type="radio" name="revisit" id="revisit_false" value="0" > 
+                                                    <label class="form-check-label" for="revisit_false">
+                                                    否
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-3">
+                                            <label for="revisit_division" class="form-label">回診科別</label>
+                                            <select class="form-select" >
+                                                <option selected>請選擇 </option>
+                                                <option value="1">胸腔科</option>
+                                                <option value="2">感染科</option>
+                                                <option value="3">復健科</option>
+                                                <option value="4">神經科</option>
+                                                <option value="5">精神科</option>
+                                                <option value="6">其他</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="d-flex flex-row-reverse  "></nav>
+                                            <a class="btn btn-info  " >提交</a>
+                                        </div>
+
+                                </form>     
+                                </div>
+                        </section>
+                        
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="alert alert-warning alert-dismissible fade show position-absolute start-50 top-50 translate-middle h-50 " role="alert">
+        <div class="position-relative start-50 top-50 translate-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
